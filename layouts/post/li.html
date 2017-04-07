@@ -1,0 +1,11 @@
+<article class="index">
+  <span class="date">
+    {{- .Date.Format "January 2, 2006" -}}
+  </span>
+  <a href="{{ .Permalink }}"><h3>{{ .Title }}</h3></a>
+  <div class="tags">
+    {{ range .Params.tags }}
+      <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+  </div>
+</article>

@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+    {{ range .Data.Pages.GroupByDate "2006"  }}
+      <h2 class="list">{{ .Key }}</h2>
+      {{ range where .Pages "Section" "post" }}
+        {{ .Render "li"}}
+      {{ end }}
+    {{ end }}
+{{ partial "footer.html" . }}

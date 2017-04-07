@@ -1,0 +1,6 @@
+{{ partial "header.html" . }}
+<h2 class="list">{{ .Title }}</h2>
+{{ range .Data.Pages }}
+  {{ .Render "li"}}
+{{ end }}
+{{ partial "footer.html" . }}
